@@ -1,0 +1,6 @@
+[submodule "code/protected/vendors/zLess"]
+	path = code/protected/vendors/zLess
+	url = ../zLess
+[submodule "code/protected/vendors/zTester"]
+	path = code/protected/vendors/zTester
+	url = ../zTester/
