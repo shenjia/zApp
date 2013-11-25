@@ -4,3 +4,6 @@
 [submodule "code/protected/vendors/zTester"]
 	path = code/protected/vendors/zTester
 	url = ../zTester/
+[submodule "code/protected/vendors/simpletest"]
+	path = code/protected/vendors/simpletest
+	url = ../simpletest
