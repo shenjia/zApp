@@ -1,4 +1,4 @@
 zapp
 ====
 
-A webapp template, base on yii framework
+A webapp template, base on yii framework.
