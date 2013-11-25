@@ -7,6 +7,3 @@
 [submodule "code/protected/vendors/simpletest"]
 	path = code/protected/vendors/simpletest
 	url = ../simpletest
-[submodule "code/protected/vendors/yii"]
-	path = code/protected/vendors/yii
-	url = https://github.com/yiisoft/yii.git
