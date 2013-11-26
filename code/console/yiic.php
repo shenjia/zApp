@@ -6,5 +6,5 @@ define('ENV', 'development');
 
 require_once DOC_ROOT.'/common/config/define.php';
 $yiic=DOC_ROOT.'/common/vendors/yii/framework/yiic.php';
-$config=APP_ROOT.'/config/'.ENV.'.php';
+$config=__DIR__.'/config/console.php';
 require_once($yiic);

@@ -1,36 +1,28 @@
 <?php
-
-// uncomment the following to define a path alias
-// Yii::setPathOfAlias('local','path/to/local-folder');
-
-// This is the main Web application configuration. Any writable
-// CWebApplication properties can be configured here.
+Yii::setPathOfAlias('common', DOC_ROOT.'/common');
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'learnsmart',
+	'name'=>'site',
+    'language'=>'zh_cn',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
 
 	// autoloading model and component classes
 	'import'=>array(
+		'common.config.*',
+		'common.models.*',
+		'common.helpers.*',
+		'common.components.*',
 		'application.config.*',
 		'application.models.*',
-		'application.form.*',
+		'application.forms.*',
 		'application.helpers.*',
 		'application.components.*',
 	),
 
 	'modules'=>array(
-		// uncomment the following to enable the Gii tool
-		/*
-		'gii'=>array(
-			'class'=>'system.gii.GiiModule',
-			'password'=>'Enter Your Password Here',
-			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1'),
-		),
-		*/
+	
 	),
 
 	// application components
@@ -49,10 +41,10 @@ return array(
 			),
 		),
 		'db'=>array(
-			'connectionString' => 'mysql:host=127.0.0.1;dbname=learnsmart',
+			'connectionString' => DB_CONNECT_STRING,
 			'emulatePrepare' => true,
-			'username' => 'local',
-			'password' => 'locallocal',
+			'username' => DB_USERNAME,
+			'password' => DB_PASSWORD,
 			'charset' => 'utf8',
 		),
 		'errorHandler'=>array(
@@ -65,6 +57,7 @@ return array(
 				array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
+				    'logFile'=>'application.log'
 				),
 				// uncomment the following to show log messages on web pages
 				/*
