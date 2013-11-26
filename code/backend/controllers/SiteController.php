@@ -2,6 +2,7 @@
 
 class SiteController extends Controller
 {
+    public $publicActions = array('error');
 	public function actions()
 	{
 		return array(

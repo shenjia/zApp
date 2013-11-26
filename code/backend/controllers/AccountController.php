@@ -5,6 +5,7 @@ class AccountController extends Controller
 	{
 		$model=new LoginForm;
 
+	    die('hehe');
 		// if it is ajax validation request
 		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
 		{
