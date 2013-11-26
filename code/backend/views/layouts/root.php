@@ -11,6 +11,15 @@
 	<?php Resource::loadJs(); ?>
 </head>
 <body>
+<script>
+var app = {
+	VERSION: '<?= RESOURCE_VERSION ?>',
+	URL : {
+		LOGIN : '<?= Yii::app()->user->loginUrl ?>',
+		RESOURCE: '<?= rtrim(RESOURCE_SERVER, '/') ?>',
+	}
+};
+</script>
 <?php echo $content; ?>
 </body>
 </html>

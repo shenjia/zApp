@@ -1,7 +1,7 @@
 <?php
 $this->pageTitle = Yii::t('title', 'site') . ' - ' . Yii::t('title', 'backend'); 
 Resource::loadCss('admin_layout'); 
-Resource::loadJs(array('index'));
+Resource::loadJs(array('wind', 'index', 'admin'));
 ?>
 <div class="wrap">
     <noscript><h1 class="noscript"><?php echo Yii::t('notice', 'js_disabled')?></h1></noscript>
@@ -9,7 +9,7 @@ Resource::loadJs(array('index'));
         <tr class="head">
             <th>
             <div class="header">
-            <h1><?= Yii::t('title', 'site')?></h1>
+            <a href="/"><h1><?= Yii::t('title', 'site')?></h1></a>
             <div class="nav">
                 <!-- 菜单异步获取，采用json格式，由js处理菜单展示结构 -->
                 <ul id="J_B_main_block">
