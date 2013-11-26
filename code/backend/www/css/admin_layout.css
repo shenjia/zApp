@@ -94,6 +94,11 @@ a {
 头部
 ===================
 */
+.header {
+	position: absolute;
+    left:0;
+    top:0;
+}
 .head {
 	height: 46px;
 	background:#235179 url(../images/admin/layout/bg.jpg);
@@ -104,12 +109,12 @@ a {
 }
 .head h1 {
 	color: #FFF;
+	display: block;
+	float: left;
 	font-size: 24px;
-	margin: 0 0 0 15px;
+	min-width: 110px;
+	margin: 0 15px 0 15px;
 	line-height: 46px;
-	position: absolute;
-	left:0;
-	top:0;
 }
 .logo {
 	display: block;
@@ -121,6 +126,7 @@ a {
 .nav {
 	float: left;
 	overflow: hidden;
+	padding-top: 8px;
 }
 .nav ul {
 	float: left;

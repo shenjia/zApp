@@ -13,6 +13,12 @@ class User
         ));
     }
     
+    public static function count($condition = '') 
+    {
+        return UserModel::model()->count($condition);
+    }
+    
+    
     public static function isLogin() 
     {
         return !Yii::app()->user->isGuest;
