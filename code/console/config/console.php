@@ -12,10 +12,12 @@ return array(
 	// autoloading model and component classes
 	'import'=>array(
 		'common.config.*',
+		'common.logics.*',
 		'common.models.*',
 		'common.helpers.*',
 		'common.components.*',
 		'application.config.*',
+		'application.logic.*',
 		'application.models.*',
 		'application.helpers.*',
 		'application.components.*',

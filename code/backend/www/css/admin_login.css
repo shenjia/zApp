@@ -27,14 +27,12 @@ body {
 	animation: bounceIn 600ms linear;
 }
 
-h1 a {
+h1 {
 	display: block;
 	height: 50px;
-	width: 185px;
-	margin:auto;
 	overflow: hidden;
-	text-indent: -2000em;
-	background: url(../images/admin/login/logo.png) no-repeat;
+	color: #fff;
+	text-align: center;
 }
 
 .login ul,
@@ -68,6 +66,9 @@ h1 a {
 	background:transparent;
 	font-size:18px;
 	font-family:Arial,"Microsoft Yahei";
+}
+.login .input.error {
+	color: #FF0000;
 }
 .login .input:focus {
 	outline:0 none;

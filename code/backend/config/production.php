@@ -1,9 +1,22 @@
 <?php
+/**
+ * 静态资源服务器、静态资源版本
+ */
+define('RESOURCE_SERVER', '/');
+define('RESOURCE_VERSION', '1.0');
+
+/**
+ * 上传配置
+ */
+define('UPLOAD_TEMP_PATH', '/tmp');
+define('UPLOAD_PATH', DOC_ROOT . '/upload');
+
 Yii::setPathOfAlias('common', DOC_ROOT.'/common');
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'site',
     'language'=>'zh_cn',
+    'homeUrl'=>'/',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -11,10 +24,12 @@ return array(
 	// autoloading model and component classes
 	'import'=>array(
 		'common.config.*',
+		'common.logics.*',
 		'common.models.*',
 		'common.helpers.*',
 		'common.components.*',
 		'application.config.*',
+		'application.logics.*',
 		'application.models.*',
 		'application.forms.*',
 		'application.helpers.*',
@@ -51,6 +66,9 @@ return array(
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
+		),
+		'request'=>array(
+		    //'enableCsrfValidation' => true
 		),
 		'log'=>array(
 			'class'=>'CLogRouter',

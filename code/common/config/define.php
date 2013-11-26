@@ -7,5 +7,5 @@ if (!defined('PAGECOUNT')) define('PAGECOUNT', 15);
  * 环境配置
  */
 require_once __DIR__ . '/' . ENV . '/debug.php';
-require_once __DIR__ . '/' . ENV . '/resource.php';
 require_once __DIR__ . '/' . ENV . '/database.php';
+require_once __DIR__ . '/' . ENV . '/urls.php';

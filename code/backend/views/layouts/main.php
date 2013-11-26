@@ -1,5 +1,6 @@
 <?php $this->beginContent('//layouts/headfoot'); ?>
-<div id="page" class="main">
+<?php Resource::loadCss('admin_style'); ?>
+<div class="wrap">
     <?php echo $content; ?>
 </div>
 <?php $this->endContent(); ?>
