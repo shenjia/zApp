@@ -4,11 +4,13 @@ class MenuConfig
     const ROOT = 'root';
     
     public static $menu = array(
+        /*
         'custom' => array(
-            'custom' => '/name/user',
+            'setting',
         ),
+        */
         'user' => array(
-            'user' => '/name/user',
+            'list'
         ),
     );
 }

@@ -1,20 +1,25 @@
 <?php
 $this->pageTitle = Yii::t('title', 'site') . ' - ' . Yii::t('title', 'backend'); 
 Resource::loadCss('admin_layout'); 
-Resource::loadJs(array('index', 'menu'));
+Resource::loadJs(array('index'));
 ?>
 <div class="wrap">
     <noscript><h1 class="noscript"><?php echo Yii::t('notice', 'js_disabled')?></h1></noscript>
     <table width="100%" height="100%" style="table-layout:fixed;">
         <tr class="head">
-            <th><h1><?= Yii::t('title', 'site')?></h1></th>
-            <td>
+            <th>
+            <div class="header">
+            <h1><?= Yii::t('title', 'site')?></h1>
             <div class="nav">
                 <!-- 菜单异步获取，采用json格式，由js处理菜单展示结构 -->
                 <ul id="J_B_main_block">
                     
                 </ul>
             </div>
+            </div>
+            </th>
+            <td>
+            
             <div class="login_info">
                 <a href="<?= FRONTEND_URL ?>" class="home" target="_blank"><?= Yii::t('title', 'frontend')?></a><span class="mr10"><?= Yii::t('account', 'role.' . Yii::app()->user->role)?>: <?echo Yii::app()->user->name ?></span><a href="/account/logout" class="mr10">[<?echo Yii::t('title', 'logout') ?>]</a>
             </div></td>
@@ -66,7 +71,6 @@ Resource::loadJs(array('index', 'menu'));
         </tr>
     </table>
 </div>
-<?php echo Menu::output()?>
 <script>
 //iframe 加载事件
 var iframe_default = document.getElementById('iframe_default');
@@ -74,4 +78,5 @@ $(iframe_default.contentWindow.document).ready(function() {
 	$('#loading').hide();
 	$(iframe_default).show();
 });
+var SUBMENU_CONFIG = <?php echo Menu::render();?>; 
 </script>
