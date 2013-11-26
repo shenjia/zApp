@@ -1,9 +1,9 @@
-[submodule "code/protected/vendors/zLess"]
-	path = code/protected/vendors/zLess
+[submodule "code/common/vendors/zLess"]
+	path = code/common/vendors/zLess
 	url = ../zLess
-[submodule "code/protected/vendors/zTester"]
-	path = code/protected/vendors/zTester
+[submodule "code/common/vendors/zTester"]
+	path = code/common/vendors/zTester
 	url = ../zTester/
-[submodule "code/protected/vendors/simpletest"]
-	path = code/protected/vendors/simpletest
+[submodule "code/common/vendors/simpletest"]
+	path = code/common/vendors/simpletest
 	url = ../simpletest
