@@ -8,7 +8,7 @@ class Resource
 	public static function getPath ( $file, $type = null )
 	{
 		if ( $type ) $file = $type . '/' . $file . '.' . $type;
-		return RESOURCE_SERVER . '/' . $file . '?v=' . ( DEBUG ? time() : RESOURCE_VERSION );
+		return trim( RESOURCE_SERVER, '/' ) . '/' . $file . '?v=' . ( DEBUG ? time() : RESOURCE_VERSION );
 	}
     
     /**
