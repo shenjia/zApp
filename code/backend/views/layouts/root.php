@@ -8,7 +8,7 @@
 	<meta name="robots" content="none" />
 	<base target="_self" /> 
 	<title><?php echo CHtml::encode( is_null($this->pageTitle) ? Yii::t( 'title', 'site') : $this->pageTitle );?></title>
-	<?php Resource::loadCss( 'app' ); ?>
+	<?php Resource::loadJs(); ?>
 </head>
 <body>
 <?php echo $content; ?>

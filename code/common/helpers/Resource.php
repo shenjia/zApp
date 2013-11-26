@@ -18,8 +18,8 @@ class Resource
      */
     public static function loadJs ( $scripts = array(), $position = CClientScript::POS_END )
     {
-		Yii::app()->clientScript->setCoreScriptUrl( RESOURCE_SERVER . '/js' );
-        Yii::app()->clientScript->registerCoreScript( 'jquery' );
+		Yii::app()->clientScript->setCoreScriptUrl( trim( RESOURCE_SERVER, '/' ) . '/js' );
+        Yii::app()->clientScript->registerCoreScript( DEBUG ? 'jquery' : 'jquery.min' );
         
         Value::toArray( $scripts );
         

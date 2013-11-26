@@ -8,3 +8,4 @@ if (!defined('PAGECOUNT')) define('PAGECOUNT', 15);
  */
 require_once __DIR__ . '/' . ENV . '/debug.php';
 require_once __DIR__ . '/' . ENV . '/database.php';
+require_once __DIR__ . '/' . ENV . '/urls.php';

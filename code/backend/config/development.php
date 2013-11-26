@@ -24,10 +24,12 @@ return array(
 	// autoloading model and component classes
 	'import'=>array(
 		'common.config.*',
+		'common.logics.*',
 		'common.models.*',
 		'common.helpers.*',
 		'common.components.*',
 		'application.config.*',
+		'application.logics.*',
 		'application.models.*',
 		'application.forms.*',
 		'application.helpers.*',
@@ -69,6 +71,9 @@ return array(
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
+		),
+		'request'=>array(
+		    //'enableCsrfValidation' => true
 		),
 		'log'=>array(
 			'class'=>'CLogRouter',

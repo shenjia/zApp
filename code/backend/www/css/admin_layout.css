@@ -87,6 +87,7 @@ a {
 }
 .wrap {
 	min-width: 880px;
+	height: 100%;
 }
 /*
 ===================
@@ -100,6 +101,15 @@ a {
 .head th {
 	width: 140px;
 	height:46px;
+}
+.head h1 {
+	color: #FFF;
+	font-size: 24px;
+	margin: 0 0 0 15px;
+	line-height: 46px;
+	position: absolute;
+	left:0;
+	top:0;
 }
 .logo {
 	display: block;
@@ -512,3 +522,11 @@ a {
 	margin-left:10px;
 	top:85px;
 }
+
+/*
+˙全屏
+*/
+.fullScreen .content th{display:none;width:0;}
+.fullScreen .head,.fullScreen .tab{height:0;display:none;}
+.fullScreen #default{*left:0;*top:-90px;}
+.fullScreen div.options{top:0;}
