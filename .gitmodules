@@ -7,3 +7,6 @@
 [submodule "code/common/vendors/simpletest"]
 	path = code/common/vendors/simpletest
 	url = ../simpletest
+[submodule "code/common/vendors/yii"]
+	path = code/common/vendors/yii
+	url = /Users/zhangshenjia/Cloud/works/github/yii
