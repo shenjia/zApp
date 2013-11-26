@@ -1,5 +1,4 @@
 <?php
-
 class SiteController extends Controller
 {
     public $publicActions = array('error');
@@ -14,7 +13,13 @@ class SiteController extends Controller
 
 	public function actionIndex()
 	{
+	    $this->layout = 'top';
 		$this->render('index');
+	}
+	
+	public function actionHome() 
+	{
+	    $this->render('home');
 	}
 
 	public function actionError()

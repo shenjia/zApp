@@ -8,7 +8,7 @@ class Resource
 	public static function getPath ( $file, $type = null )
 	{
 		if ( $type ) $file = $type . '/' . $file . '.' . $type;
-		return RESOURCE_SERVER . '/' . $file . '?v=' . ( DEBUG ? time() : RESOURCE_VERSION );
+		return rtrim( RESOURCE_SERVER, '/' ) . '/' . $file . '?v=' . ( DEBUG ? time() : RESOURCE_VERSION );
 	}
     
     /**
@@ -18,8 +18,8 @@ class Resource
      */
     public static function loadJs ( $scripts = array(), $position = CClientScript::POS_END )
     {
-		Yii::app()->clientScript->setCoreScriptUrl( RESOURCE_SERVER . '/js' );
-        Yii::app()->clientScript->registerCoreScript( 'jquery' );
+		Yii::app()->clientScript->setCoreScriptUrl( rtrim( RESOURCE_SERVER, '/' ) . '/js' );
+        Yii::app()->clientScript->registerCoreScript( DEBUG ? 'jquery' : 'jquery.min' );
         
         Value::toArray( $scripts );
         

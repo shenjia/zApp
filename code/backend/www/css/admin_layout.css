@@ -87,12 +87,18 @@ a {
 }
 .wrap {
 	min-width: 880px;
+	height: 100%;
 }
 /*
 ===================
 头部
 ===================
 */
+.header {
+	position: absolute;
+    left:0;
+    top:0;
+}
 .head {
 	height: 46px;
 	background:#235179 url(../images/admin/layout/bg.jpg);
@@ -100,6 +106,15 @@ a {
 .head th {
 	width: 140px;
 	height:46px;
+}
+.head h1 {
+	color: #FFF;
+	display: block;
+	float: left;
+	font-size: 24px;
+	min-width: 110px;
+	margin: 0 15px 0 15px;
+	line-height: 46px;
 }
 .logo {
 	display: block;
@@ -111,6 +126,7 @@ a {
 .nav {
 	float: left;
 	overflow: hidden;
+	padding-top: 8px;
 }
 .nav ul {
 	float: left;
@@ -275,7 +291,7 @@ a {
 }
 .tab th {
 	background: #f2f2f2;
-	padding:5px 5px 0;
+	padding:2px 5px 0 5px;
 	font-weight: 100;
 }
 .tab td {
@@ -512,3 +528,11 @@ a {
 	margin-left:10px;
 	top:85px;
 }
+
+/*
+˙全屏
+*/
+.fullScreen .content th{display:none;width:0;}
+.fullScreen .head,.fullScreen .tab{height:0;display:none;}
+.fullScreen #default{*left:0;*top:-90px;}
+.fullScreen div.options{top:0;}
